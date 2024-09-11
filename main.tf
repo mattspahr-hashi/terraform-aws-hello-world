@@ -5,7 +5,7 @@ data "hcp_packer_artifact" "hello-world" {
   region       = "us-east-2"
 }
 
-resource "aws_instance" "python_backend" {
+resource "aws_instance" "hello_world" {
   ami             = data.hcp_packer_artifact.hello-world.external_identifier
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.web_sg.name]
