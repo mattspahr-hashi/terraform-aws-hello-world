@@ -7,7 +7,7 @@ data "hcp_packer_artifact" "hello-world" {
 
 resource "aws_instance" "hello_world" {
   ami             = data.hcp_packer_artifact.hello-world.external_identifier
-  instance_type   = "t2.micro"
+  instance_type   = var.instance_type
   security_groups = [aws_security_group.web_sg.name]
 
   tags = {
