@@ -16,7 +16,7 @@ resource "aws_instance" "hello_world" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name        = "web_sg"
+  name        = "${var.instance_name}-sg"
   description = "Allow inbound traffic to web servers"
 
   ingress {
