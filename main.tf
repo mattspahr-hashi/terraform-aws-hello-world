@@ -11,7 +11,7 @@ resource "aws_instance" "hello_world" {
   security_groups = [aws_security_group.web_sg.name]
 
   tags = {
-    Name = "hello-world"
+    Name = var.instance_name
   }
 }
 
