@@ -7,6 +7,7 @@ Terraform module which creates a hello world EC2 Instance on AWS.
 ```hcl
 module "hello-world" {
     source = "app.terraform.io/mattspahr-sandbox/hello-world/aws"
-    version = "1.0.7"
+    version = "1.0.8"
+    # insert required variables here
 }
 ```
